@@ -15,8 +15,8 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 export class AppComponent {
   appPages = [
     {
-      title: 'Gfashion',
-      url: '/auth/signup',
+      title: 'Gevents',
+      url: '/gevents',
       icon: './assets/sample-icons/side-menu/categories.svg'
     },
     {

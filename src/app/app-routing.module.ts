@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/walkthrough', pathMatch: 'full' },
+  { path: 'gevents', loadChildren: './gevents/gevents.module#GeventsPageModule' },
+  { path: 'stands', loadChildren: './stands/stands.module#StandsPageModule' },
+  { path: 'asistentes', loadChildren: './asistentes/asistentes.module#AsistentesPageModule' },
   { path: 'walkthrough', loadChildren: './walkthrough/walkthrough.module#WalkthroughPageModule' },
   { path: 'getting-started', loadChildren: './getting-started/getting-started.module#GettingStartedPageModule' },
   { path: 'auth/login', loadChildren: './login/login.module#LoginPageModule' },
@@ -11,14 +14,13 @@ const routes: Routes = [
   { path: 'app', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'contact-card', loadChildren: './contact-card/contact-card.module#ContactCardPageModule' },
   { path: 'forms-and-validations', loadChildren: './forms/validations/forms-validations.module#FormsValidationsPageModule' },
-  { path: 'forms-filters', loadChildren: './forms/filters/forms-filters.module#FormsFiltersPageModule' },
+  { path: 'forms-filters', loadChildren: '/forms/filters/forms-filters.module#FormsFiltersPageModule' },
   { path: 'page-not-found', loadChildren: './page-not-found/page-not-found.module#PageNotFoundModule' },
   { path: 'showcase', loadChildren: './showcase/showcase.module#ShowcasePageModule' },
   { path: 'firebase', loadChildren: './firebase/firebase-integration.module#FirebaseIntegrationModule' },
   { path: 'maps', loadChildren: './maps/maps.module#MapsPageModule' },
   { path: 'video-playlist', loadChildren: './video-playlist/video-playlist.module#VideoPlaylistPageModule' },
   { path: '**', redirectTo: 'page-not-found' },
-  { path: 'home/home', loadChildren: './home/home.module#HomePageModule' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -13,6 +13,10 @@ const routes: Routes = [
         path: 'categories',
         children: [
           {
+            path: 'homegfashion',
+            loadChildren: './gfashion/gfashion.module#GfashionPageModule'
+          },
+          {
             path: '',
             loadChildren: '../categories/categories.module#CategoriesPageModule'
           },
