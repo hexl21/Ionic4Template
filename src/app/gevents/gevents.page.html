@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>gevents</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -63,6 +66,8 @@
               {{asistentes }} personas asistirán
             </div>
             <ion-button  [routerLink]="'/asistentes/' + evento" size="large"  expand="block">Asistentes</ion-button>
+            <ion-button  [routerLink]="'/stands/' + evento" size="large"  expand="block">Stands</ion-button>
+
           </ion-col>
 
 

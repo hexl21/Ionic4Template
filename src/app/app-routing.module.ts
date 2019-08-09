@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: '/walkthrough', pathMatch: 'full' },
   { path: 'gevents', loadChildren: './gevents/gevents.module#GeventsPageModule' },
-  { path: 'stands', loadChildren: './stands/stands.module#StandsPageModule' },
+  { path: 'stands/:event', loadChildren: './stands/stands.module#StandsPageModule' },
   { path: 'asistentes/:event', loadChildren: './asistentes/asistentes.module#AsistentesPageModule' },
   { path: 'walkthrough', loadChildren: './walkthrough/walkthrough.module#WalkthroughPageModule' },
   { path: 'getting-started', loadChildren: './getting-started/getting-started.module#GettingStartedPageModule' },

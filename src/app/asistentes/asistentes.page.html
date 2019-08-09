@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>asistentes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card class="" *ngFor="let asistente of dataAssis">
+    <ion-card-content  class="paddingCard">
+      <ion-row>
+          <ion-col col-2 class="paddingTopX" >
+              <div class="logoImgPeople animated tada shadowImg" height="120">
+                <img class=" detailsimgSpeaker" src="https://testing.gevents.co/middleware/public/images/events/user_avatar.jpg">
+                <!--  <i class="demo-icon  icon-geventsticket-1  placeholder-icon IconLeft" style="padding-top: 9px;">&#xe94d;</i> -->
+              </div>
+            </ion-col>
+        <ion-col col-8 class="">
+          <div class="" >
+            <b>{{asistente.nombre}} {{asistente.apellido}}</b>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
