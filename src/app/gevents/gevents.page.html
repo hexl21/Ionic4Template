@@ -5,5 +5,71 @@
 </ion-header>
 
 <ion-content>
+  <img [src]="banner" alt="">
+  <img [src]="icono" alt="">
+  <div class="det-padding">
+    <h4 class="news-title eventTitle">
+      {{ event.nombre }}
+    </h4>
+    <div class=" col-40 typeEvent2 center">
+      <span>
+       {{ event.clase }}
+      </span>
+    </div>
+  </div>
 
+  <div class=" details-writer">
+    <ion-grid>
+      <ion-row class="row">
+        <ion-col class="lineRight">
+          <div>
+            <i class="demo-icon  icon-geventscalendar icon100">&#xe849;</i>
+            <div class="date1 text-center">
+              {{ event.fecha_inicio | date }}
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="lineRight">
+          <div>
+            <i class="demo-icon   icon-geventsclock-3 icon100">&#xe9ef;</i>
+            <div class="date1 text-center">
+              {{ event.fecha_inicio | date:'HH:mm a' }}
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="lineRight">
+          <div >
+            <i class="demo-icon   icon-geventslocation-3 icon100">&#xe97b;</i>
+            <div class="date1 text-center">
+              {{ event.lugar }}
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="">
+          <div >
+            <i class="demo-icon    icon-geventschat icon100">&#xe805;</i>
+            <div class="date1 text-center">
+              Chat
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <div >
+        <ion-row class="row lineTopAsistir" (click)="goToAttendantPage()">
+          <ion-col class="col">
+            <div class="asistentesTittle">
+              <i class="demo-icon  icon-geventscheck IconAsistir">&#xe861;</i>
+              {{asistentes }} personas asistirán
+            </div>
+            <ion-button  [routerLink]="'/asistentes/' + evento" size="large"  expand="block">Asistentes</ion-button>
+          </ion-col>
+
+
+        </ion-row>
+      </div>
+
+    </ion-grid>
+
+  </div>
 </ion-content>

@@ -9,6 +9,13 @@ import { Router } from '@angular/router';
 })
 export class GeventsPage implements OnInit {
 
+  event: any[] = [];
+  banner: string;
+  icono: string;
+  asistentes : any;
+  //variable temporal
+  evento: any = 1
+
   constructor(public api: EventoService, private router: Router) {
     this.getEvent();
   }
@@ -16,11 +23,19 @@ export class GeventsPage implements OnInit {
   getEvent(){
     this.api.getEventServi(1).subscribe(
       data =>{
+        this.event = data.evento[0]
+        this.banner = this.api.globalUrlImages + data.banner['imagen']
+        this.icono = this.api.globalUrlImages + data.icono['imagen']
+        this.asistentes = data.asistentes
         console.log(data);
       }
       ,error =>{
         console.log("noo");
       })
+  }
+
+  goToAttendantPage(){
+
   }
 
   ngOnInit() {
